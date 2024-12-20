@@ -124,6 +124,3 @@ The dataset contains information about user sessions, including session duration
 
 By leveraging these analyses, the marketing and technical teams can enhance user engagement, optimize network resources, and improve overall customer satisfaction.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
