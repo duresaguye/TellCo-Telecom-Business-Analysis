@@ -1,77 +1,45 @@
-# Telecom Data Analysis
+# TellCo Telecom Business Analysis Dashboard
 
-This repository contains the analysis for User Overview and User Engagement of a telecom dataset. The goal is to track user engagement and provide insights to improve the Quality of Service (QoS) and user experience.
+## Overview
 
-## Dataset
+This project focuses on analyzing customer data for TellCo, a mobile service provider, to identify opportunities for growth. The challenge includes data exploration, user analysis, clustering, and dashboard development. The key sections of this project include:
 
-The dataset contains information about user sessions, including session duration, download and upload traffic, and application usage. Key columns include:
-- `MSISDN/Number`: Unique identifier for customers
-- `Bearer Id`: Session identifier
-- `Dur. (ms)`: Session duration in milliseconds
-- `Total DL (Bytes)`: Total download traffic in bytes
-- `Total UL (Bytes)`: Total upload traffic in bytes
-- Application-specific traffic columns (e.g., `Social Media DL (Bytes)`, `Google DL (Bytes)`, etc.)
-- `Handset Manufacturer`: Manufacturer of the handset
-- `Handset Type`: Type of the handset
+- User Overview Analysis
+- Engagement Analysis
+- Experience Analysis
+- Satisfaction Analysis
 
-## Analysis Steps
+The dashboard is developed using **Next.js** to visualize the insights and present them in an interactive format.
 
-### Task 1 - User Overview Analysis
+---
 
-1. **Identify the Top 10 Handsets Used by Customers**:
-   - Identified the top 10 handsets used by customers based on the `Handset Type` column.
+## Key Tasks
 
-2. **Identify the Top 3 Handset Manufacturers**:
-   - Identified the top 3 handset manufacturers based on the `Handset Manufacturer` column.
+### 1. User Overview Analysis
 
-3. **Identify the Top 5 Handsets per Top 3 Handset Manufacturer**:
-   - For each of the top 3 manufacturers, identified the top 5 handsets used by customers.
+- **Goal**: Identify top handsets and manufacturers.
+- **Outcome**: Aggregated and analyzed user data to find top 10 handsets, top 3 manufacturers, and top 5 handsets per manufacturer.
+- **Results**: Generated insights and recommendations for marketing teams based on handset usage.
 
-4. **Aggregate User Behavior Information**:
-   - Aggregated user behavior information including session frequency, session duration, download data, upload data, and total data volume.
+### 2. User Engagement Analysis
 
-5. **Handle Missing Values and Outliers**:
-   - Replaced missing values with the mean and handled outliers by capping values at the 99th percentile.
+- **Goal**: Measure and cluster user engagement metrics.
+- **Outcome**:
+    - Aggregated engagement metrics (session frequency, session duration, traffic).
+    - Applied k-means clustering to group users by engagement levels.
+    - Plotted top 3 most-used applications and derived top 10 most engaged users per app.
 
-6. **Variable Transformations**:
-   - Segmented users into top five decile classes based on total session duration and computed total data per decile class.
+### 3. User Experience Analysis
 
-7. **Basic Metrics Analysis**:
-   - Analyzed basic metrics (mean, median, etc.) and computed dispersion parameters for each quantitative variable.
+- **Goal**: Analyze user experience based on network parameters and device characteristics.
+- **Outcome**:
+    - Aggregated TCP retransmissions, RTT, throughput, and handset data.
+    - Clustered users based on experience metrics.
+    - Analyzed throughput distribution per handset type.
 
-8. **Graphical and Bivariate Analysis**:
-   - Visualized data using histograms and scatter plots to explore relationships between variables.
+### 4. Dashboard Development
 
-9. **Correlation Analysis**:
-   - Computed a correlation matrix for application-specific data and interpreted the findings.
-
-10. **Dimensionality Reduction**:
-    - Performed Principal Component Analysis (PCA) to reduce data dimensions and interpreted the results.
-
-### Task 2 - User Engagement Analysis
-
-1. **Aggregate Engagement Metrics per Customer**:
-   - Aggregated session frequency, total session duration, and total traffic (download and upload) per customer.
-   - Reported the top 10 customers per engagement metric.
-
-2. **Normalize Each Engagement Metric and Run K-Means Clustering**:
-   - Normalized the engagement metrics.
-   - Ran K-Means clustering with k=3 to classify customers into three groups of engagement.
-
-3. **Compute Metrics for Each Cluster**:
-   - Computed the minimum, maximum, average, and total non-normalized metrics for each cluster.
-   - Interpreted the results visually with accompanying text.
-
-4. **Aggregate User Total Traffic per Application**:
-   - Aggregated user total traffic per application.
-   - Derived the top 10 most engaged users per application.
-
-5. **Plot the Top 3 Most Used Applications**:
-   - Identified the top 3 most used applications.
-   - Plotted the top 10 users for each of the top 3 applications using bar charts.
-
-6. **Optimize the Value of k Using the Elbow Method**:
-   - Used the elbow method to find the optimal value of k for K-Means clustering.
-   - Interpreted the findings.
-
+- **Goal**: Build a dashboard to visualize insights.
+- **Outcome**: Developed an interactive **Next.js** dashboard to display the results of user overview and engagement analysis, with user-friendly navigation and clean visualizations.
+  
 
